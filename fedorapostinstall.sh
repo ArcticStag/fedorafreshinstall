@@ -1,5 +1,11 @@
 # !/bin/bash
 
+## Unsure how to have this function correctly with multiple installations in a single line
+# function sdnf
+# {
+#   sudo dnf -y
+# }
+
 sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 sleep 1
@@ -11,7 +17,7 @@ sudo dnf -y config-manager --add-repo https://brave-browser-rpm-nightly.s3.brave
 
 sudo rpm --import https://brave-browser-rpm-nightly.s3.brave.com/brave-core-nightly.asc
 
-sudo dnf -y install brave-browser-nightly steam lutris git vim terminator
+sudo dnf -y install brave-browser-nightly steam lutris git vim terminator neofetch htop
 
 cd ~/Downloads/
 
