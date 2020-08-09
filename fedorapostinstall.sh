@@ -1,6 +1,6 @@
 # !/bin/bash
 
-## Unsure how to have this function correctly with multiple installations in a single line
+# ## Unsure how to have this function correctly with multiple installations in a single line
 # function sdnf
 # {
 #   sudo dnf -y
@@ -8,7 +8,6 @@
 
 sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-sleep 1
 sudo dnf -y upgrade
 
 sudo dnf -y install dnf-plugins-core
@@ -26,3 +25,7 @@ wget https://atom-installer.github.com/v1.49.0/atom.x86_64.rpm
 
 sudo dnf -y install  ~/Downloads/atom.x86_64.rpm
 sudo dnf -y install ~/Downloads/mailspring-1.7.8-0.1.x86.64.rpm
+
+rm -frv *.rpm
+
+cd ~/
