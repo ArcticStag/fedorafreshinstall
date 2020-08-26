@@ -29,3 +29,6 @@ sudo dnf -y install ~/Downloads/mailspring-1.7.8-0.1.x86.64.rpm
 rm -frv *.rpm
 
 cd ~/
+
+sudo yum install https://prerelease.keybase.io/keybase_amd64.rpm -y
+run_keybase
